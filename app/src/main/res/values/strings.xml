@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Gluco</string>
+    <string name="Gluco">logogluco</string>
+    <string name="Bienvenido">Bienvenido</string>
+    <string name="IniciarSesio">Iniciar Sesion</string>
+    <string name="Registrarse">Registrarse</string>
+    <string name="corero">Correo electrónico o teléfono</string>
+    <string name="contraseña">Ingresa tu contraseña</string>
+    <string name="Registro">Registrarse</string>
+    <string name="Nombre_registro">Nombre:</string>
+    <string name="Correoelectronico_registrp">Correo electrónico:</string>
+    <string name="Contraseña_registro">Contraseña:</string>
+    <string name="Confirmar_contrasña_registro">Confirmar contraseña:</string>
+    <string name="Guardar_registro">Registrarse</string>
+    <string name="Nombres">Ingresa tu Nombre(s)</string>
+    <string name="EjmeploConrreo">nombre@domino.extensión</string>
+    <string name="ConfirmacionContraseña">Al menos 6 caracteres</string>
+    <string name="IngresarContraseña">Vuelva a ingresar su contraseña</string>
+    <string name="TerminaTuRegistro">Terimina tu registro</string>
+    <string name="Direccióndelconsultorio">Dirección del consultorio:</string>
+    <string name="EscribaAqui">Calle, numero, Colonia y Ciudad</string>
+    <string name="NUmeroTelfonico">Numero telefónico:</string>
+    <string name="HorariosDecConsulta">Horarios dec Consulta</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="TituloBarra">BarraNavegacion</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="Consultas">Consultas</string>
+    <string name="Dietas">Dietas</string>
+    <string name="RegistrarPaciente">Registrar paciente</string>
+    <string name="cerrasrsession">Cerrar sesión</string>
+</resources>

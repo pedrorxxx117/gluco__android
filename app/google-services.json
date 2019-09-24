@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "858396479574",
+    "firebase_url": "https://gluco-87a10.firebaseio.com",
+    "project_id": "gluco-87a10",
+    "storage_bucket": "gluco-87a10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858396479574:android:989093cb3adc8352b76bf7",
+        "android_client_info": {
+          "package_name": "com.example.gluco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "858396479574-t0uv7811ung3et45sphu6iaeqm295vad.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYMwv1OEzhCIJ0_uephcDN8VGslW76xeo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "858396479574-t0uv7811ung3et45sphu6iaeqm295vad.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "858396479574-mpc4stt2vg5e39h5ctandsepschl7nbd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "CarlosPadron.Gluco"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

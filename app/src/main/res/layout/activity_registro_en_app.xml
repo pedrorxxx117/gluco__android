@@ -22,7 +22,7 @@
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputConfirmoContraseñaRegistro" />
 
@@ -52,6 +52,7 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
@@ -81,6 +82,7 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/btnRegistroNuevoUsuario"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6">
 
@@ -95,8 +97,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/IngresarContraseña"
-                android:textCursorDrawable="@color/CampoEscribir"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:textCursorDrawable="@color/CampoEscribir" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
@@ -104,14 +106,13 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="11dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="4dp"
         android:text="@string/Confirmar_contrasña_registro"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/inputConfirmoContraseñaRegistro"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.274"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputContraseñaRegistro" />
 
@@ -120,9 +121,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="54dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="238dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="4dp"
         android:text="@string/Contraseña_registro"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/inputContraseñaRegistro"
@@ -141,6 +142,7 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
@@ -155,8 +157,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/ConfirmacionContraseña"
-                android:textCursorDrawable="@color/CampoEscribir"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:textCursorDrawable="@color/CampoEscribir" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
@@ -167,7 +169,7 @@
         android:layout_marginStart="53dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="169dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="4dp"
         android:text="@string/Correoelectronico_registrp"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/inputCorreoRegistro"
@@ -199,8 +201,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/EjmeploConrreo"
-                android:textCursorDrawable="@color/CampoEscribir"
-                android:inputType="textEmailAddress"/>
+                android:inputType="textEmailAddress"
+                android:textCursorDrawable="@color/CampoEscribir" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 

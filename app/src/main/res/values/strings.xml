@@ -28,6 +28,10 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="TituloBarra">BarraNavegacion</string>
+    <string name="NombredePaciente">Pedro Ramos</string>
+    <string name="TipodeDiabets">Diabetes tipo G</string>
+    <string name="botonPerfil">Perfil</string>
+    <string name="Descripcion">Fotodeusuario</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>

@@ -20,7 +20,10 @@
     <string name="Direccióndelconsultorio">Dirección del consultorio:</string>
     <string name="EscribaAqui">Calle, numero, Colonia y Ciudad</string>
     <string name="NUmeroTelfonico">Numero telefónico:</string>
-    <string name="HorariosDecConsulta">Horarios dec Consulta</string>
+    <string name="HorariosDecConsulta">Horarios dec Consulta:</string>
+    <string name="De">De</string>
+    <string name="a">a</string>
+    <string name="terminarregistro">Terminar registro</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>

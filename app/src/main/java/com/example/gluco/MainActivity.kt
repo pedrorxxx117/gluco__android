@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
             val RegistroUsuario = findViewById<Button>(R.id.btnresgistrarce)
             RegistroUsuario.setOnClickListener(View.OnClickListener {
-                val intent = Intent(this,Registro_en_app::class.java)
+                val intent = Intent(this,CompletarRegistro::class.java)
                 startActivity(intent)
             })
             val IniciarSeccion = findViewById<Button>(R.id.IniciarSession)

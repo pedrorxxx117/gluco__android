@@ -23,6 +23,7 @@
     <string name="HorariosDecConsulta">Horarios dec Consulta:</string>
     <string name="De">De</string>
     <string name="a">a</string>
+    <string name="Fechadenacmineto">Selecciona  tu fecha de nacimineto</string>
     <string name="terminarregistro">Terminar registro</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -35,6 +36,17 @@
     <string name="TipodeDiabets">Diabetes tipo G</string>
     <string name="botonPerfil">Perfil</string>
     <string name="Descripcion">Fotodeusuario</string>
+    <string name="Genero">Genero:</string>
+    <string-array name="genero">
+        <item name="hombre" type="string">Hombre</item>
+        <item name="mujer" type="string">Mujer</item>
+    </string-array>
+    <string name="tipodediabetes">Tipo de diabetes:</string>
+    <string-array name="tipodediabetes">
+        <item name="tipo1" type="string">diabetes Tipo 1</item>
+        <item name="tipo2" type="string">diabetes Tipo 2</item>
+    </string-array>
+
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>

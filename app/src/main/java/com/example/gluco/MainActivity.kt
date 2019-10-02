@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
             })
             val IniciarSeccion = findViewById<Button>(R.id.IniciarSession)
             IniciarSeccion.setOnClickListener(View.OnClickListener {
-                val intent = Intent(this, BarraNavegacion::class.java)
+                val intent = Intent(this, registro_usuario::class.java)
                 startActivity(intent)
             })
 

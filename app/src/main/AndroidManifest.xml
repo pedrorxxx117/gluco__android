@@ -12,10 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".registro_usuario"></activity>
         <activity
             android:name=".BarraNavegacion"
             android:label="@string/TituloBarra"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".CompletarRegistro" />
         <activity android:name=".Registro_en_app" />
         <activity android:name=".MainActivity">

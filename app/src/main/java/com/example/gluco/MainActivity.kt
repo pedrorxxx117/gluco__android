@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this, BarraNavegacion::class.java)
                 startActivity(intent)
             })
+        
 
         }
     }

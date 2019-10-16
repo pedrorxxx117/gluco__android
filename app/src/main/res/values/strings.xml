@@ -49,8 +49,8 @@
 
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_gallery">Dietas</string>
+    <string name="menu_slideshow">Consultas</string>
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
@@ -58,4 +58,23 @@
     <string name="Dietas">Dietas</string>
     <string name="RegistrarPaciente">Registrar paciente</string>
     <string name="cerrasrsession">Cerrar sesión</string>
+
+    //Dietas
+    <string name="SP">Seleccionar paciente</string>
+    <string name="masrojo">cruzroja</string>
+    <string name="dieta">Dieta X</string>
+    <string name="almuerzo">Almuerzo</string>
+    <string name="comida">Comida</string>
+    <string name="cena">Cena</string>
+
+    //Consulta
+    <string name="med">Mediciones</string>
+    <string name="desde">Desde</string>
+    <string name="hasta">Hasta</string>
+    <string name="nombre1">Nombre</string>
+    <string name="fechadn">Fecha de nacimiento</string>
+    <string name="tipodiab">Tipo de diabetes</string>
+    <string name="Correo">Correo Electronico</string>
+    <string name="medifech">100mg/dl 05 de Oct 10:12 AM</string>
+    <string name="buscar">Buscar</string>
 </resources>

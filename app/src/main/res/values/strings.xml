@@ -21,8 +21,8 @@
     <string name="EscribaAqui">Calle, numero, Colonia y Ciudad</string>
     <string name="NUmeroTelfonico">Numero telefónico:</string>
     <string name="HorariosDecConsulta">Horarios dec Consulta:</string>
-    <string name="De">De</string>
-    <string name="a">a</string>
+    <string name="De">De:</string>
+    <string name="a">a:</string>
     <string name="Fechadenacmineto">Selecciona  tu fecha de nacimineto</string>
     <string name="terminarregistro">Terminar registro</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -77,4 +77,6 @@
     <string name="Correo">Correo Electronico</string>
     <string name="medifech">100mg/dl 05 de Oct 10:12 AM</string>
     <string name="buscar">Buscar</string>
+    <string name="nada">.</string>
+    <string name="hora"> 00:00 </string>
 </resources>

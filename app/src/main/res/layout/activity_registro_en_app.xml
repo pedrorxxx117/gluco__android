@@ -57,12 +57,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_nombres"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColorHint="#4B8EC3"
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText_nombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/Nombres"
@@ -87,6 +89,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6">
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_confirmarContraseña"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColorHint="#4B8EC3"
@@ -94,6 +97,7 @@
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText_cfcontraseña"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/IngresarContraseña"
@@ -147,6 +151,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_contraseña"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColorHint="#4B8EC3"
@@ -154,6 +159,7 @@
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText_contraseña"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/ConfirmacionContraseña"
@@ -192,12 +198,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_correo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColorHint="#4B8EC3"
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText_correo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/EjmeploConrreo"

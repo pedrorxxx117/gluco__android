@@ -19,7 +19,7 @@
         <item
             android:id="@+id/nav_tools"
             android:icon="@drawable/ic_cerrarsesion"
-            android:title="@string/cerrasrsession" />
+            android:title="@string/nada"/>
     </group>
 
     <!--<item android:title="Communicate">

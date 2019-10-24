@@ -17,6 +17,7 @@
             android:icon="@drawable/ic_registro_paciente"
             android:title="@string/RegistrarPaciente"/>
 
+
     </group>
 
 </menu>

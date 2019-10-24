@@ -6,18 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".CompletarRegistro">
 
-    <EditText
-        android:id="@+id/editText8"
-        android:layout_width="67dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="130dp"
-        android:ems="10"
-        android:inputType="time"
+    <TextView
+        android:id="@+id/horaentrada2"
+        android:layout_width="58dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="261dp"
+        android:layout_marginTop="415dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="224dp"
+        android:hint="___"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/hora_salida"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="406dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="213dp"
+        android:text="@string/a"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView7"
@@ -48,7 +63,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editText_direccion"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="36dp"
@@ -76,14 +91,14 @@
         android:layout_marginBottom="18dp"
         android:text="@string/NUmeroTelfonico"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintBottom_toTopOf="@+id/editText_telefono"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_direccion" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editText_telefono"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
@@ -111,40 +126,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:text="@string/De"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/editText7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="18dp"
-        android:text="@string/a"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/editText8"
-        app:layout_constraintStart_toEndOf="@+id/editText7"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_telefono" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnTerminarRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="23dp"
         android:layout_marginEnd="136dp"
         android:layout_marginBottom="109dp"
         android:background="@color/botonLogin"
@@ -152,20 +140,37 @@
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText8" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/editText7"
-        android:layout_width="67dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="28dp"
-        android:ems="10"
-        android:inputType="time"
-        app:layout_constraintEnd_toStartOf="@+id/textView12"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+    <Button
+        android:id="@+id/hora_entrada"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="406dp"
+        android:layout_marginEnd="325dp"
+        android:layout_marginBottom="213dp"
+        android:text="@string/De"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/horaentrada"
+        android:layout_width="58dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="416dp"
+        android:layout_marginEnd="246dp"
+        android:layout_marginBottom="223dp"
+        android:hint="___"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

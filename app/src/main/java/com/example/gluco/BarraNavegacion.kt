@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_barra_navegacion.*
 
@@ -62,13 +63,27 @@ class BarraNavegacion : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean{
-        return  when (item.itemId){
-            R.id.nav_tools -> {
-                logout()
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
+
+    /*override fun onOptionsItemSelected(item: MenuItem): Boolean{
+        val id = item.itemId
+        val cr = R.id.nav_toolsbarra
+
+        if ( id == R.id.nav_toolsarriba){
+
+            return true
         }
+        return  super.onOptionsItemSelected(item)
+    }*/
+
+
+
+    fun Louout(item: MenuItem){
+        FirebaseAuth.getInstance().signOut()
+        val intent = Intent(this, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+        startActivity(intent)
+        finish()
     }
+
 }

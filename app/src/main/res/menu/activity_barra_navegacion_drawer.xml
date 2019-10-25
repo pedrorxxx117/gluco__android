@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
@@ -17,9 +18,11 @@
             android:icon="@drawable/ic_registro_paciente"
             android:title="@string/RegistrarPaciente" />
         <item
-            android:id="@+id/nav_tools"
+            android:id="@+id/nav_toolsbarra"
             android:icon="@drawable/ic_cerrarsesion"
-            android:title="@string/nada"/>
+            android:title="@string/cerrasrsession"
+            android:onClick="Louout"/>
+        <!--android:onClick="Louout"!-->
     </group>
 
     <!--<item android:title="Communicate">

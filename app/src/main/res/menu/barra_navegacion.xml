@@ -16,6 +16,12 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_registro_paciente"
             android:title="@string/RegistrarPaciente"/>
+        <item
+            android:id="@+id/nav_toolsarriba"
+            android:icon="@drawable/ic_cerrarsesion"
+            android:title="@string/cerrasrsession"
+            android:visible="true"
+            app:showAsAction="never"/>
 
 
     </group>

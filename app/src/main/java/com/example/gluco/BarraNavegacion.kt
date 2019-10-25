@@ -63,20 +63,6 @@ class BarraNavegacion : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-
-    /*override fun onOptionsItemSelected(item: MenuItem): Boolean{
-        val id = item.itemId
-        val cr = R.id.nav_toolsbarra
-
-        if ( id == R.id.nav_toolsarriba){
-
-            return true
-        }
-        return  super.onOptionsItemSelected(item)
-    }*/
-
-
-
     fun Louout(item: MenuItem){
         FirebaseAuth.getInstance().signOut()
         val intent = Intent(this, MainActivity::class.java).apply {

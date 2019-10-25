@@ -4,7 +4,9 @@ import android.app.TimePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.TimePicker
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -33,6 +35,33 @@ class CompletarRegistro : AppCompatActivity() {
 
          var idNombre = intent.getStringExtra("idnombre")
          var iduser = idNombre
+
+        val hora_entrada = findViewById<Button>(R.id.hora_entrada)
+        val txthora_entrada = findViewById<TextView>(R.id.horaentrada)
+
+        hora_entrada.setOnClickListener {
+            val cal = Calendar.getInstance()
+            val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
+                cal.set(Calendar.HOUR_OF_DAY, hour)
+                cal.set(Calendar.MINUTE, minute)
+                txthora_entrada.text = SimpleDateFormat("HH:mm").format(cal.time)
+            }
+            TimePickerDialog(this, timeSetListener, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE), true).show()
+        }
+
+        val hora_salida = findViewById<Button>(R.id.hora_salida)
+        val txthora_salida = findViewById<TextView>(R.id.horaentrada2)
+
+        hora_salida.setOnClickListener {
+            val cal = Calendar.getInstance()
+            val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
+                cal.set(Calendar.HOUR_OF_DAY, hour)
+                cal.set(Calendar.MINUTE, minute)
+                txthora_salida.text = SimpleDateFormat("HH:mm").format(cal.time)
+            }
+            TimePickerDialog(this, timeSetListener, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE), true).show()
+        }
+
         //var nombre = intent.getStringExtra("idnombre")
         //val txtnombre = findViewById<EditText>(R.id.editText_nombre)
 
@@ -63,9 +92,12 @@ class CompletarRegistro : AppCompatActivity() {
             timepicker.show()
         }*/
 
+
+
         btnTerminarRegistro.setOnClickListener {
             val direccion = editText_direccion.text.toString().trim()
             val  telefono = editText_telefono.text.toString().trim()
+            val hora1 = txthora_entrada.text.toString().trim()
             /*val horaEntrada = hora_entrada.text.toString().trim()
             val  horaSalida = hora_salida.text.toString().trim()*/
            /* val hora1 = editText_hora1.text.toString().trim()

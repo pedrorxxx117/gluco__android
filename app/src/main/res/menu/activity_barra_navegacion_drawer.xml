@@ -22,7 +22,6 @@
             android:icon="@drawable/ic_cerrarsesion"
             android:title="@string/cerrasrsession"
             android:onClick="Louout"/>
-        <!--android:onClick="Louout"!-->
     </group>
 
     <!--<item android:title="Communicate">

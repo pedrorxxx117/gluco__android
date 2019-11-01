@@ -1,13 +1,11 @@
 package com.example.gluco
 
 import android.app.TimePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.TimePicker
+import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.DocumentReference
@@ -19,12 +17,8 @@ import java.util.*
 
 class CompletarRegistro : AppCompatActivity() {
 
-
     private val TAG = "CompletarRegistro"
-    var timeFormat = SimpleDateFormat("hh:mm a", Locale.US)
-
-
-
+  //  var timeFormat = SimpleDateFormat("hh:mm a", Locale.US)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -98,6 +92,7 @@ class CompletarRegistro : AppCompatActivity() {
             val direccion = editText_direccion.text.toString().trim()
             val  telefono = editText_telefono.text.toString().trim()
             val hora1 = txthora_entrada.text.toString().trim()
+            val hora2 = txthora_salida.text.toString().trim()
             /*val horaEntrada = hora_entrada.text.toString().trim()
             val  horaSalida = hora_salida.text.toString().trim()*/
            /* val hora1 = editText_hora1.text.toString().trim()
@@ -132,18 +127,27 @@ class CompletarRegistro : AppCompatActivity() {
             val docinfo = hashMapOf(
                 "telefono" to telefono,
                 "nombre" to iduser,
-                "direccion" to direccion
-                /*"horaEntrada" to horaEntrada,
-                "horaSalida" to  horaSalida*/
+                "direccion" to direccion,
+                "horaEntrada" to hora1,
+                "horaSalida" to  hora2
             )
 
             db.collection("doc").document(idNombre).set(docinfo)
                 .addOnSuccessListener {
                     Log.d(TAG,"Se añadio correctamente!")
+                    val intent = Intent(this, MainActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    }
+                    startActivity(intent)
                 }
                 .addOnFailureListener {e ->
                     Log.w(TAG, "Algo salio mal.")
+                    Toast.makeText(this,"Algo salio mal",Toast.LENGTH_SHORT).show()
                 }
+
+
+
+
         }
     }
 }

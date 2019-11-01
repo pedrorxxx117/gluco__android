@@ -63,6 +63,17 @@ class BarraNavegacion : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
+    fun Usuario(item: MenuItem){
+        val intent = Intent(this, registro_usuario::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+        startActivity(intent)
+        finish()
+    }
+
+
+
+
     fun Louout(item: MenuItem){
         FirebaseAuth.getInstance().signOut()
         val intent = Intent(this, MainActivity::class.java).apply {

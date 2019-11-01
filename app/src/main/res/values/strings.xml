@@ -23,7 +23,7 @@
     <string name="HorariosDecConsulta">Horarios dec Consulta:</string>
     <string name="De">De:</string>
     <string name="a">a:</string>
-    <string name="Fechadenacmineto">Selecciona  tu fecha de nacimineto</string>
+    <string name="Fechadenacmineto">Fecha de nacimineto:</string>
     <string name="terminarregistro">Terminar registro</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -58,6 +58,8 @@
     <string name="Dietas">Dietas</string>
     <string name="RegistrarPaciente">Registrar paciente</string>
     <string name="cerrasrsession">Cerrar sesión</string>
+   <string name="guinhora">____</string>
+
 
     //Dietas
     <string name="SP">Seleccionar paciente</string>

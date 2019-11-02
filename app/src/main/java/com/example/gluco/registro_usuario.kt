@@ -23,6 +23,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_registro_en_app.*
 import kotlinx.android.synthetic.main.activity_registro_usuario.*
 import java.lang.IllegalStateException
+import java.text.SimpleDateFormat
 import java.util.*
 
 class registro_usuario : AppCompatActivity() {
@@ -39,7 +40,7 @@ class registro_usuario : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro_usuario)
 
-        val db = FirebaseFirestore.getInstance()
+       val db = FirebaseFirestore.getInstance()
 
         val items = arrayOf("Hombre", "Mujer")
         spinnerGenero.adapter = ArrayAdapter(this,android.R.layout.simple_spinner_item,items)
@@ -52,7 +53,10 @@ class registro_usuario : AppCompatActivity() {
             val correo = edit_correoPaciente.text.toString().trim()
             val contraseña = edit_contraseñaPaciente.text.toString().trim()
             val cfcontraseña = edit_contraseñaPciente2.text.toString().trim()
-            val fehca = dateTv.text.toString().trim()
+            val sdf = SimpleDateFormat("dd/M/yyyy")
+            val currentDate = sdf.format(Date())
+             val fecha = dateTv.setText(currentDate)
+
 
             if (nombre.isEmpty()){
                 edit_nombrePaciente.error = "Ingresa tu nombre."
@@ -87,7 +91,7 @@ class registro_usuario : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val user = FirebaseAuth.getInstance().currentUser
+           val user = FirebaseAuth.getInstance().currentUser
             if (user != null ){
                 idDoc = user.email.toString()
             }
@@ -97,7 +101,7 @@ class registro_usuario : AppCompatActivity() {
                 "doctor" to idDoc,
                 "genero" to Genero,
                 "email" to correo,
-                "nacimineto" to fehca,
+                "nacimineto" to fecha,
                 "nombre" to nombre
 
             )
@@ -139,7 +143,7 @@ class registro_usuario : AppCompatActivity() {
             }
         }
 
-        mAuth1 = FirebaseAuth.getInstance()
+       mAuth1 = FirebaseAuth.getInstance()
 
          var firebaseOptions:FirebaseOptions = FirebaseOptions.Builder()
             .setDatabaseUrl("https://gluco-87a10.firebaseio.com")

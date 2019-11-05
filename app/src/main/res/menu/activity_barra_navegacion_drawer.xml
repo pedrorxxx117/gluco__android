@@ -10,14 +10,14 @@
             android:icon="@drawable/ic_consultas"
             android:title="@string/Consultas" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_dieta"
             android:icon="@drawable/ic_dietas"
             android:title="@string/Dietas" />
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_paciente"
             android:icon="@drawable/ic_registro_paciente"
-            android:title="@string/RegistrarPaciente"
-            android:onClick="Usuario"/>
+            android:title="@string/RegistrarPaciente"/>
+            <!--android:onClick="Usuario"/-->
         <item
             android:id="@+id/nav_toolsbarra"
             android:icon="@drawable/ic_cerrarsesion"

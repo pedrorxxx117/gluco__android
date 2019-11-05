@@ -58,16 +58,18 @@
     <string name="Dietas">Dietas</string>
     <string name="RegistrarPaciente">Registrar paciente</string>
     <string name="cerrasrsession">Cerrar sesión</string>
-   <string name="guinhora">____</string>
+    <string name="guinhora">____</string>
 
 
     //Dietas
     <string name="SP">Seleccionar paciente</string>
     <string name="masrojo">cruzroja</string>
     <string name="dieta">Dieta X</string>
-    <string name="almuerzo">Almuerzo</string>
-    <string name="comida">Comida</string>
-    <string name="cena">Cena</string>
+    <string name="almuerzo">Almuerzo:</string>
+    <string name="comida">Comida:</string>
+    <string name="cena">Cena:</string>
+    <string name="nombreDieta">Nombre dieta:</string>
+    <string name="guardar">Guardar</string>
 
     //Consulta
     <string name="med">Mediciones</string>

@@ -1,6 +1,5 @@
 package com.example.gluco
 
-import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Build
@@ -9,35 +8,31 @@ import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
 import android.view.View
-import android.widget.*
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.annotation.NonNull
 import androidx.annotation.RequiresApi
+import com.example.gluco.ui.paciente.PacienteFragment
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.FirebaseApp
 import com.google.firebase.FirebaseOptions
-import com.google.firebase.Timestamp
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_registro_en_app.*
 import kotlinx.android.synthetic.main.activity_registro_usuario.*
-import java.io.File
+import kotlinx.android.synthetic.main.activity_registro_usuario.spinnerGenero
+import kotlinx.android.synthetic.main.activity_registro_usuario.spinnerdiabetes
+import kotlinx.android.synthetic.main.paciente_fragment.*
 import java.lang.IllegalStateException
-import java.sql.Time
-import java.text.SimpleDateFormat
-import java.time.*
-import java.time.format.DateTimeFormatter
 import java.util.*
-import kotlin.concurrent.timer
 
-class registro_usuario : AppCompatActivity() {
-    private lateinit var mAuth1 : FirebaseAuth
-    private lateinit var mAuth2 : FirebaseAuth
+class Paciente : AppCompatActivity() {
+    private lateinit var mAuth1: FirebaseAuth
+    private lateinit var mAuth2: FirebaseAuth
     private val TAG = "RegistroUsuario"
-
 
     var Genero = ""
     var Diabetes = ""
@@ -45,45 +40,35 @@ class registro_usuario : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_registro_usuario)
+        setContentView(R.layout.paciente_activity)
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.container, PacienteFragment.newInstance())
+                .commitNow()
+        }
 
-       val db = FirebaseFirestore.getInstance()
+        val db = FirebaseFirestore.getInstance()
 
         val items = arrayOf("Hombre", "Mujer")
-        spinnerGenero.adapter = ArrayAdapter(this,android.R.layout.simple_spinner_item,items)
+        spinnerGenero_F.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, items)
 
         val tiposdeabetes = arrayOf("diabetes Tipo 1", "diabetes Tipo 2")
-        spinnerdiabetes.adapter = ArrayAdapter(this,android.R.layout.simple_spinner_item,tiposdeabetes)
+        spinnerdiabetes_F.adapter =
+            ArrayAdapter(this, android.R.layout.simple_spinner_item, tiposdeabetes)
 
+        btnRegistroPaciente_F.setOnClickListener {
+            val nombre = edit_nombrePaciente_F.text.toString().trim()
+            val correo = edit_correoPaciente_F.text.toString().trim()
+            val contraseña = edit_contraseñaPaciente_F.text.toString().trim()
+            val cfcontraseña = edit_contraseñaPciente2_F.text.toString().trim()
+            val fecha = dateTv_F.text.toString()
 
-       /* var parser = SimpleDateFormat("yyyy-MM-dd")
-        var formatter = SimpleDateFormat("dd.MM.yyyy")
-        var fecha = formatter.format(parser.parse(fechas))*/
-
-
-
-
-
-
-
-
-        btnRegistroPaciente.setOnClickListener {
-            val nombre = edit_nombrePaciente.text.toString().trim()
-            val correo = edit_correoPaciente.text.toString().trim()
-            val contraseña = edit_contraseñaPaciente.text.toString().trim()
-            val cfcontraseña = edit_contraseñaPciente2.text.toString().trim()
-            val fecha = dateTv.text.toString()
-
-
-
-
-
-            if (nombre.isEmpty()){
+            if (nombre.isEmpty()) {
                 edit_nombrePaciente.error = "Ingresa tu nombre."
                 edit_nombrePaciente.requestFocus()
                 return@setOnClickListener
             }
-            if (correo.isEmpty()){
+            if (correo.isEmpty()) {
                 edit_correoPaciente.error = "Ingresa tu correo."
                 edit_correoPaciente.requestFocus()
                 return@setOnClickListener
@@ -93,7 +78,7 @@ class registro_usuario : AppCompatActivity() {
                 edit_correoPaciente.requestFocus()
                 return@setOnClickListener
             }
-            if (contraseña.isEmpty() ||  contraseña.length <= 6) {
+            if (contraseña.isEmpty() || contraseña.length <= 6) {
                 edit_correoPaciente.error = "Revise su contraseña."
                 edit_correoPaciente.requestFocus()
                 return@setOnClickListener
@@ -105,14 +90,14 @@ class registro_usuario : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if(cfcontraseña != contraseña){
+            if (cfcontraseña != contraseña) {
                 editText_cfcontraseña.error = "No coincide la contraseña."
                 editText_cfcontraseña.requestFocus()
                 return@setOnClickListener
             }
 
-           val user = FirebaseAuth.getInstance().currentUser
-            if (user != null ){
+            val user = FirebaseAuth.getInstance().currentUser
+            if (user != null) {
                 idDoc = user.email.toString()
             }
 
@@ -133,20 +118,33 @@ class registro_usuario : AppCompatActivity() {
                     }
                     startActivity(intent)
                 }
-                .addOnFailureListener {e ->
+                .addOnFailureListener { e ->
                     Log.w(TAG, "Algo salio mal.")
-                    Toast.makeText(this,"Algo salio mal",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Algo salio mal", Toast.LENGTH_SHORT).show()
                 }
 
             registroPaciente(correo, contraseña)
+        }
 
 
+        pickDateBtn_F.setOnClickListener {
+            val c = Calendar.getInstance()
+            val year = c.get(Calendar.YEAR)
+            val month = c.get(Calendar.MONTH)
+            val day = c.get(Calendar.DAY_OF_MONTH)
+
+            val dpd = DatePickerDialog(this,android.R.style.Theme_Holo_Dialog, DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+                dateTv_F.text = "$dayOfMonth-${monthOfYear+1}-$year"
+
+            }, year, month, day)
+            dpd.show()
 
         }
 
-        spinnerGenero.onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
-            override fun onItemSelected(parent: AdapterView<*>, view: View, pos: Int, id: Long)  {
+        spinnerGenero_F.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>, view: View, pos: Int, id: Long) {
                 Genero = parent.getItemAtPosition(pos).toString().trim()
+
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
@@ -154,66 +152,51 @@ class registro_usuario : AppCompatActivity() {
             }
         }
 
-        spinnerdiabetes.onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
+        spinnerdiabetes_F.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View, pos: Int, id: Long) {
                 Diabetes = parent.getItemAtPosition(pos).toString().trim()
             }
+
             override fun onNothingSelected(parent: AdapterView<*>) {
                 // Another interface callback
             }
         }
 
-       mAuth1 = FirebaseAuth.getInstance()
+        mAuth1 = FirebaseAuth.getInstance()
 
-         var firebaseOptions:FirebaseOptions = FirebaseOptions.Builder()
+        var firebaseOptions: FirebaseOptions = FirebaseOptions.Builder()
             .setDatabaseUrl("https://gluco-87a10.firebaseio.com")
             .setApiKey("AIzaSyBxjR_-OlC1dJA3WwqfwzNs2mbp2wwpDUY")
             .setApplicationId("gluco-87a10").build()
 
-        try { var myApp = FirebaseApp.initializeApp(getApplicationContext(), firebaseOptions, "gluco")
+        try {
+            var myApp = FirebaseApp.initializeApp(getApplicationContext(), firebaseOptions, "gluco")
             mAuth2 = FirebaseAuth.getInstance(myApp)
-        }catch (e: IllegalStateException){
+        } catch (e: IllegalStateException) {
             mAuth2 = FirebaseAuth.getInstance(FirebaseApp.getInstance("gluco"))
         }
+
+
     }
+
 
     private fun registroPaciente(correo: String, contraseña: String) {
         mAuth2.createUserWithEmailAndPassword(correo, contraseña)
-            .addOnCompleteListener(this, object: OnCompleteListener<AuthResult>{
-               override fun onComplete(@NonNull task:Task<AuthResult>) {
+            .addOnCompleteListener(this, object: OnCompleteListener<AuthResult> {
+                override fun onComplete(@NonNull task: Task<AuthResult>) {
                     if (!task.isSuccessful()){
                         val ex = task.getException().toString()
-                        Toast.makeText(this@registro_usuario, "Registro Fallido" + ex,
+                        Toast.makeText(this@Paciente, "Registro Fallido" + ex,
                             Toast.LENGTH_LONG).show()
                     }else{
-                        Toast.makeText(this@registro_usuario, "Registro Exitoso",
+                        Toast.makeText(this@Paciente, "Registro Exitoso",
                             Toast.LENGTH_LONG).show()
                         mAuth2.signOut()
                     }
                 }
 
             })
-
     }
 
-
-    @RequiresApi(Build.VERSION_CODES.N)
-       fun clickDataPicker(view: View) {
-           val c = Calendar.getInstance()
-           val year = c.get(Calendar.YEAR)
-           val month = c.get(Calendar.MONTH)
-           val day = c.get(Calendar.DAY_OF_MONTH)
-
-           val dpd = DatePickerDialog(this,android.R.style.Theme_Holo_Dialog, DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
-               dateTv.text = "$dayOfMonth-${monthOfYear+1}-$year"
-
-           }, year, month, day)
-           dpd.show()
-       }
-
+   // @RequiresApi(Build.VERSION_CODES.N)
 }
-
-
-
-
-

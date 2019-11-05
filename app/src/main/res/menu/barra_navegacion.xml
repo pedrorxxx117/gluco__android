@@ -5,15 +5,15 @@
     tools:showIn="navigation_view">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_consultas"
             android:title="@string/Consultas"/>
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_dieta"
             android:icon="@drawable/ic_dietas"
             android:title="@string/Dietas"/>
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_paciente"
             android:icon="@drawable/ic_registro_paciente"
             android:title="@string/RegistrarPaciente"/>
         <item

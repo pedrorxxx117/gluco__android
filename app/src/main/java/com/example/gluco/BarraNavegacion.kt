@@ -16,6 +16,8 @@ import androidx.appcompat.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import com.example.gluco.ui.gallery.GalleryFragment
+import com.example.gluco.ui.tools.ToolsFragment
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_barra_navegacion.*
 
@@ -50,6 +52,7 @@ class BarraNavegacion : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -57,6 +60,19 @@ class BarraNavegacion : AppCompatActivity() {
         menuInflater.inflate(R.menu.barra_navegacion, menu)
         return true
     }
+
+
+    /*override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle item selection
+        return when (item.itemId) {
+            R.id.nav_gallery_fr -> {
+               ToolsFragment()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }*/
+
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/nav_home">
 
     <fragment
         android:id="@+id/nav_home"
@@ -15,7 +15,7 @@
         android:id="@+id/nav_gallery"
         android:name="com.example.gluco.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_tools" />
 
     <fragment
         android:id="@+id/nav_slideshow"
@@ -27,8 +27,7 @@
         android:id="@+id/nav_tools"
         android:name="com.example.gluco.ui.tools.ToolsFragment"
         android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools"
-        app:showAsAction="never"/>
+        tools:layout="@layout/activity_registro_usuario" />
 
     <fragment
         android:id="@+id/nav_share"
@@ -37,8 +36,21 @@
         tools:layout="@layout/fragment_share" />
 
     <fragment
+        android:id="@+id/nav_dieta"
+        android:name="com.example.gluco.ui.dietas.DietasFragment"
+        android:label="@string/dieta"
+        tools:layout="@layout/dietas_fragment"/>
+
+
+    <fragment
         android:id="@+id/nav_send"
         android:name="com.example.gluco.ui.send.SendFragment"
         android:label="@string/menu_send"
         tools:layout="@layout/fragment_send" />
+
+    <fragment
+        android:id="@+id/nav_paciente"
+        android:name="com.example.gluco.ui.paciente.PacienteFragment"
+        android:label="@string/RegistrarPaciente"
+        tools:layout="@layout/paciente_activity"/>
 </navigation>

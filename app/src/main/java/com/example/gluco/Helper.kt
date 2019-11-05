@@ -12,6 +12,16 @@ fun Context.login(){
         }
     startActivity(intent)
 }
+fun Context.registroPaciente(){
+    val intent = Intent(this, registro_usuario::class.java)
+    startActivity(intent)
+
+    /*val intent = Intent(this, registro_usuario::class.java).apply {
+        flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK
+    }
+    startActivity(intent)*/
+    //finish()
+}
 
 /*un Context.logout(){
         FirebaseAuth.getInstance().signOut()

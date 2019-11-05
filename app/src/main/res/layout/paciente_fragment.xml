@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/paciente"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.paciente.PacienteFragment">
+
+    <TextView
+        android:id="@+id/txtnombreusuario_F"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="276dp"
+        android:text="@string/Nombre_registro"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/inputNombreRegistroPaciente_F"
+        android:layout_width="349dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtnombreusuario_F">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="#4B8EC3"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_nombrePaciente_F"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Nombres"
+                android:textColorHint="#4B8EC3"
+                android:textCursorDrawable="@color/CampoEscribir" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtcorreousuario_F"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Correoelectronico_registrp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputNombreRegistroPaciente_F" />
+
+    <LinearLayout
+        android:id="@+id/inputCorreoRegistroUsuario_F"
+        android:layout_width="349dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtcorreousuario_F">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="#4B8EC3"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_correoPaciente_F"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/EjmeploConrreo"
+                android:inputType="textEmailAddress"
+                android:textCursorDrawable="@color/CampoEscribir" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtcontraseña_F"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="241dp"
+        android:text="@string/Contraseña_registro"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCorreoRegistroUsuario_F" />
+
+    <LinearLayout
+        android:id="@+id/inputContraseñaRegistroUsuario_F"
+        android:layout_width="349dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtcontraseña_F">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="#4B8EC3"
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_contraseñaPaciente_F"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/ConfirmacionContraseña"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@color/CampoEscribir" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView6_F"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="141dp"
+        android:text="@string/Confirmar_contrasña_registro"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputContraseñaRegistroUsuario_F" />
+
+    <LinearLayout
+        android:id="@+id/inputConfirmoContraseñaRegistroUsuario_F"
+        android:layout_width="349dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6_F">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="#4B8EC3"
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_contraseñaPciente2_F"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/IngresarContraseña"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@color/CampoEscribir" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/pickDateBtn_F"
+        android:layout_width="211dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/CampoEscribir"
+        android:text="@string/Fechadenacmineto"
+        android:textColor="@color/cardview_dark_background"
+        app:layout_constraintEnd_toStartOf="@+id/dateTv_F"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputConfirmoContraseñaRegistroUsuario_F" />
+
+    <TextView
+        android:id="@+id/dateTv_F"
+        android:layout_width="145dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/guinhora"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputConfirmoContraseñaRegistroUsuario_F" />
+
+    <Spinner
+        android:id="@+id/spinnerGenero_F"
+        android:layout_width="179dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="99dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView14_F"
+        app:layout_constraintTop_toBottomOf="@+id/pickDateBtn_F" />
+
+    <TextView
+        android:id="@+id/textView14_F"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="290dp"
+        android:text="@string/Genero"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pickDateBtn_F" />
+
+    <TextView
+        android:id="@+id/textView15_F"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="208dp"
+        android:text="@string/tipodediabetes"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerGenero_F" />
+
+    <Spinner
+        android:id="@+id/spinnerdiabetes_F"
+        android:layout_width="199dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView15_F"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerGenero_F" />
+
+    <Button
+        android:id="@+id/btnRegistroPaciente_F"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="600dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="69dp"
+        android:background="@color/botonLogin"
+        android:text="@string/Registrarse"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

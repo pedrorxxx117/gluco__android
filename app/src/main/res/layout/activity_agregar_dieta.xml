@@ -9,78 +9,92 @@
     tools:context=".AgregarDieta">
 
     <TextView
+        android:id="@+id/txtTitulo_agre_dietas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/titulo_gre_dietas"
+        android:textSize="26sp"
+        android:translationX="85dp"
+        tools:text="@string/titulo_gre_dietas" />
+
+    <TextView
         android:id="@+id/txttitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:text="@string/nombreDieta"
-        android:textSize="22sp"
-        android:layout_margin="5dp"/>
+        android:textSize="22sp" />
 
     <EditText
         android:id="@+id/tituloDieta"
-        android:layout_margin="2dp"
-        android:padding="10dp"
-        android:inputType="text"
-        android:hint="Ingresa un nombre"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:hint="Ingresa un nombre"
+        android:inputType="text"
+        android:padding="10dp" />
+
     <TextView
         android:id="@+id/txtalmuerzo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:text="@string/almuerzo"
-        android:textSize="22sp"
-        android:layout_margin="5dp"/>
+        android:textSize="22sp" />
 
     <EditText
         android:id="@+id/Almuerzo"
-        android:layout_margin="2dp"
-        android:padding="10dp"
-        android:inputType="text"
-        android:hint="Descripción"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:hint="Descripción"
+        android:inputType="text"
+        android:padding="10dp" />
 
     <TextView
         android:id="@+id/txtcomida"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:text="@string/comida"
-        android:textSize="22sp"
-        android:layout_margin="5dp"/>
+        android:textSize="22sp" />
+
     <EditText
         android:id="@+id/Comida"
-        android:layout_margin="2dp"
-        android:padding="10dp"
-        android:inputType="text"
-        android:hint="Descripción"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:hint="Descripción"
+        android:inputType="text"
+        android:padding="10dp" />
+
     <TextView
         android:id="@+id/txtcena"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:text="@string/cena"
-        android:textSize="22sp"
-        android:layout_margin="5dp"/>
+        android:textSize="22sp" />
+
     <EditText
         android:id="@+id/Cena"
-        android:layout_margin="2dp"
-        android:padding="10dp"
-        android:inputType="text"
-        android:hint="Descripción"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:hint="Descripción"
+        android:inputType="text"
+        android:padding="10dp" />
 
     <Button
         android:id="@+id/guardaedieta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_margin="30dp"
         android:background="@color/botonLogin"
         android:backgroundTint="@color/botonLogin"
         android:text="@string/guardar"
-        android:layout_margin="30dp"
         android:textColor="@android:color/white" />
 
 

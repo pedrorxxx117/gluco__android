@@ -65,11 +65,13 @@
     <string name="SP">Seleccionar paciente</string>
     <string name="masrojo">cruzroja</string>
     <string name="dieta">Dieta X</string>
-    <string name="almuerzo">Almuerzo:</string>
+    <string name="titulo_gre_dietas">       Agregar dietas</string>
+    <string name="almuerzo">Desayuno:</string>
     <string name="comida">Comida:</string>
     <string name="cena">Cena:</string>
-    <string name="nombreDieta">Nombre dieta:</string>
-    <string name="guardar">Guardar</string>
+    <string name="alimentos">Alímentos permitidos:</string>
+    <string name="nombreDieta">Nombre de la dieta:</string>
+    <string name="guardar">Agregar</string>
 
     //Consulta
     <string name="med">Mediciones</string>
@@ -83,4 +85,7 @@
     <string name="buscar">Buscar</string>
     <string name="nada">.</string>
     <string name="hora"> 00:00 </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

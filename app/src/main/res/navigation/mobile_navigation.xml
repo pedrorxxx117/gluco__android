@@ -37,9 +37,9 @@
 
     <fragment
         android:id="@+id/nav_dieta"
-        android:name="com.example.gluco.ui.dietas.DietasFragment"
+        android:name="com.example.gluco.Fragment_Dietas"
         android:label="@string/dieta"
-        tools:layout="@layout/dietas_fragment"/>
+        tools:layout="@layout/fragment_fragment__dietas"/>
 
 
     <fragment
@@ -52,5 +52,5 @@
         android:id="@+id/nav_paciente"
         android:name="com.example.gluco.ui.paciente.PacienteFragment"
         android:label="@string/RegistrarPaciente"
-        tools:layout="@layout/paciente_activity"/>
+        tools:layout="@layout/fragment_home"/>
 </navigation>

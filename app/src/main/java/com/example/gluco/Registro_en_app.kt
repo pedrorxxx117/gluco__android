@@ -23,6 +23,8 @@ class Registro_en_app : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro_en_app)
 
+
+
        mAuth = FirebaseAuth.getInstance()
 
 

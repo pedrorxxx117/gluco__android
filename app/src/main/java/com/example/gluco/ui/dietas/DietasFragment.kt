@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.gluco.R
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class DietasFragment : Fragment() {
 
@@ -23,10 +24,22 @@ class DietasFragment : Fragment() {
         return inflater.inflate(R.layout.dietas_fragment, container, false)
     }
 
+
+
+
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(DietasViewModel::class.java)
         // TODO: Use the ViewModel
+
+
+
+
+
     }
+
+
+
 
 }

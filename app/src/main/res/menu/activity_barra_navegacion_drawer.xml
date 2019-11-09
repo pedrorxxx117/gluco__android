@@ -12,12 +12,13 @@
         <item
             android:id="@+id/nav_dieta"
             android:icon="@drawable/ic_dietas"
-            android:title="@string/Dietas" />
+            android:title="@string/Dietas"
+            android:onClick="Dietas"/>
         <item
             android:id="@+id/nav_paciente"
             android:icon="@drawable/ic_registro_paciente"
-            android:title="@string/RegistrarPaciente"/>
-            <!--android:onClick="Usuario"/-->
+            android:title="@string/RegistrarPaciente"
+            android:onClick="Usuario"/>
         <item
             android:id="@+id/nav_toolsbarra"
             android:icon="@drawable/ic_cerrarsesion"

@@ -8,6 +8,7 @@ import android.util.Patterns
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import com.example.gluco.ui.gallery.GalleryFragment
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_registro_en_app.*
@@ -19,6 +20,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        var actionBar = getSupportActionBar()
+        actionBar?.setTitle("Main Activity")
 
         mAuth = FirebaseAuth.getInstance()
             //al IniciarSeccion = findViewById<Button>(R.id.IniciarSession)

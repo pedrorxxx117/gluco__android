@@ -32,6 +32,7 @@ import java.time.*
 import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.concurrent.timer
+import kotlinx.android.synthetic.main.activity_registro_usuario.*
 
 class registro_usuario : AppCompatActivity() {
     private lateinit var mAuth1 : FirebaseAuth
@@ -46,6 +47,13 @@ class registro_usuario : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro_usuario)
+
+       /*val actionbar = supportActionBar
+        actionbar!!.title = "Registro Paciente"
+        actionbar.setDisplayHomeAsUpEnabled(true)
+        actionbar.setDisplayHomeAsUpEnabled(true)*/
+
+
 
        val db = FirebaseFirestore.getInstance()
 
@@ -125,9 +133,17 @@ class registro_usuario : AppCompatActivity() {
                 "nombre" to nombre
 
             )
+
+            val tipo = hashMapOf(
+                "tipo" to "paciente"
+            )
             db.collection("paciente").document(correo).set(pacienteinfo)
                 .addOnSuccessListener {
-                    Log.d(TAG, "Se añadio correctamente!")
+                    db.collection("user").document(correo).set(tipo)
+                        .addOnSuccessListener {
+                            Log.d(TAG, "Se añadio correctamente!")
+                            Toast.makeText(this,"Se añadio correctamente!",Toast.LENGTH_SHORT).show()
+                        }
                     val intent = Intent(this, MainActivity::class.java).apply {
                         flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     }
@@ -175,6 +191,11 @@ class registro_usuario : AppCompatActivity() {
         }catch (e: IllegalStateException){
             mAuth2 = FirebaseAuth.getInstance(FirebaseApp.getInstance("gluco"))
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     private fun registroPaciente(correo: String, contraseña: String) {

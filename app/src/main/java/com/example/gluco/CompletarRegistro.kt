@@ -131,10 +131,18 @@ class CompletarRegistro : AppCompatActivity() {
                 "horaEntrada" to hora1,
                 "horaSalida" to  hora2
             )
+            val tipo = hashMapOf(
+                "tipo" to "doctor"
+            )
 
             db.collection("doc").document(idNombre).set(docinfo)
                 .addOnSuccessListener {
-                    Log.d(TAG,"Se añadio correctamente!")
+                    //Log.d(TAG,"Se añadio correctamente!")
+                    //agregar tipo de usuario doctor
+                    db.collection("user").document(idNombre).set(tipo)
+                        .addOnSuccessListener {
+                            Log.d(TAG,"Se añadio correctamente!")
+                        }
                     val intent = Intent(this, MainActivity::class.java).apply {
                         flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     }

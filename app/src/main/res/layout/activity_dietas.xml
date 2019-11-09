@@ -3,14 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".Dietas">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/adBtn"
+        android:id="@+id/Btn_dieta"
         android:layout_width="48dp"
         android:layout_height="54dp"
-        android:layout_marginStart="327dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="595dp"
         android:src="@drawable/ic_action_add1"

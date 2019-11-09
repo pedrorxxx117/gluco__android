@@ -30,6 +30,8 @@ class BarraNavegacion : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_barra_navegacion)
 
+
+
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
@@ -80,11 +82,14 @@ class BarraNavegacion : AppCompatActivity() {
     }
 
     fun Usuario(item: MenuItem){
-        val intent = Intent(this, registro_usuario::class.java).apply {
+        /*val intent = Intent(this, registro_usuario::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        }
-        startActivity(intent)
-        finish()
+        }*/
+        startActivity(Intent(this@BarraNavegacion, registro_usuario::class.java))
+    }
+
+    fun Dietas(item: MenuItem){
+        startActivity(Intent(this, Dietas::class.java))
     }
 
 
